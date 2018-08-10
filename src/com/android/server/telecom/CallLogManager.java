@@ -227,7 +227,7 @@ public final class CallLogManager extends CallsManagerListenerBase {
                 call.getCallDataUsage();
 
         int callFeatures = getCallFeatures(call.getVideoStateHistory(),
-                call.getDisconnectCause().getCode() == DisconnectCause.CALL_PULLED);
+                call.getDisconnectCause().getCode() == DisconnectCause.CALL_PULLED,
                 (call.getConnectionProperties() & Connection.PROPERTY_ASSISTED_DIALING_USED) ==
                         Connection.PROPERTY_ASSISTED_DIALING_USED);
         final boolean imsCallLogEnabled = mContext.getResources().
